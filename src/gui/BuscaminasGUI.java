@@ -6,7 +6,7 @@ package gui;
 
 /**
  *
- * @author sebas
+ * @author Fabricio Castro Vega
  */
 public class BuscaminasGUI {
     
