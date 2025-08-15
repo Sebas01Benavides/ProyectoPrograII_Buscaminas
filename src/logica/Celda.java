@@ -6,7 +6,7 @@ package logica;
 
 /**
  *
- * @author sebas
+ * @author Fabricio Castro Vega
  */
 public class Celda {
     
