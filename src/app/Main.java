@@ -1,3 +1,7 @@
+/*
+ * Esta es la clase principal que inicia la aplicación del Buscaminas.
+ * Se encarga de mostrar el menú de dificultad al usuario.
+ */
 package app;
 import gui.BuscaminasGUI;
 import javax.swing.JOptionPane;
@@ -6,8 +10,12 @@ import javax.swing.JOptionPane;
  * @author sebas
  */
 public class Main {
+    /*
+     * Método principal que se ejecuta al iniciar el programa.
+     */
     public static void main(String[] args) {
         String[] opciones = {"Fácil", "Medio", "Difícil"};
+        // Muestra una ventana de diálogo para que el usuario elija la dificultad.
         int seleccion = JOptionPane.showOptionDialog(
             null,
             "Selecciona la dificultad",
@@ -21,6 +29,7 @@ public class Main {
 
         int filas = 0, columnas = 0, minas = 0;
 
+        // Asigna los valores de filas, columnas y minas según la opción elegida.
         switch (seleccion) {
             case 0: // Fácil
                 filas = 8;
@@ -38,9 +47,10 @@ public class Main {
                 minas = 99;
                 break;
             default:
-                return; // Cerrar la aplicación si se cancela
+                return; // Si el usuario cierra el diálogo, la aplicación termina.
         }
         
+        // Crea una nueva instancia de BuscaminasGUI con los parámetros de dificultad.
         new BuscaminasGUI(filas, columnas, minas);
     }
 }
